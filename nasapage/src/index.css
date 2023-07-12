@@ -11,3 +11,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.nasalogo {
+  width: 90px;
+  height: 80px;
+  
+}
+
+.navbar {
+  display: flex;
+  justify-items: center;
+  padding-bottom: 5px;
+  background-color: dimgrey;
+}
+
+.buttonsnav {
+  width: 60px;
+  height: 60px;
+  margin-top: 0.5%;
+  margin-right: 2%;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.buttonsnav:hover {
+  background-color: black;
+  color: white;
+}
+
+.boxDay{
+  display: flex;
+  padding: 20%;
+  
+  
+  margin-top: 10%;
+  margin-left: 2%;
+  
+  
+}
+
+.daylogo {
+  display: flex;
+  width: 500px;
+  height: 500px;
+  margin-left: 10%;
+}
