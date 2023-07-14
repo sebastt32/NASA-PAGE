@@ -9,7 +9,7 @@ const MainPage = () => {
             <img className='nasalogo' alt='logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1200px-NASA_logo.svg.png'></img>
             <button className='buttonsnav'>About us</button>  
             <Link className='buttonsnav' to='/dayimage'><button className='buttonsnav'>Day image</button></Link>
-            <button className='buttonsnav'>ask about Nasa</button> 
+            <Link className='buttonsnav' to='/nasainfo'><button className='buttonsnav'>Search</button></Link> 
             <button className='buttonsnav'>NASA pictures</button> 
             </nav>
             <div>
