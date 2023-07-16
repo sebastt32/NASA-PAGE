@@ -1,0 +1,11 @@
+.imagetofix{
+    justify-content: center;
+    padding-left: 450px;
+
+}
+
+.nasaimage {
+    display: flex;
+    height: 400px;
+    width: 400px;
+}

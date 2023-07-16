@@ -5,6 +5,6 @@ import { NasaSearch } from './miSlice';
 export default configureStore({
   reducer:{
     picturedaytoday:daypicture.reducer,
-    searchnasainfo:NasaSearch.reducer
+    nasainfo:NasaSearch.reducer
   }
 })

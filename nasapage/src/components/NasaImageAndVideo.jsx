@@ -1,55 +1,45 @@
 import React, {useState} from 'react';
-import { API_KEY } from '../Api/key';
+// import { API_KEY } from '../Api/key';
 import { useDispatch, useSelector } from 'react-redux';
-import { searchInfo } from '../store/miSlice';
-import {axios} from 'axios'
+import { fetchImagesData } from '../store/miSlice';
+import Nasaimages from './Gestion/nasaimages';
+
+
+
+
 
 
 
 const NasaImageAndVideo =  () => {
-    const [state, setstate] = useState('');
-    const [solt, setSolt] = useState([])
+
+    const [stateSearch, setStateSearch] = useState('');
     const dispatch = useDispatch();
-    const info = useSelector(state => state.searchnasainfo.nasainfo)
-    const alternator = useSelector(state => state.searchnasainfo.movement)
-    const peo = false;
-    let ratas = [];
-    
+     const info = useSelector(state => state.nasainfo.data)
+     const alt = useSelector(state => state.nasainfo.alternator)
+     
 
-    const searchInfo = async () => {
-        await fetch(`https://images-api.nasa.gov//search?q=${state}`)
-       .then ((response) => response.json())
-       
-       .then ((data) => {dispatch(searchInfo(data))})
+    const movement = () => {
+        const value = `https://images-api.nasa.gov//search?q=${stateSearch}`
+        dispatch(fetchImagesData(value))
     }
     
+    const handleInputChange = (event) => {
+        setStateSearch(event.target.value);
+    };
 
-    const handleinputChange = (e) => {
-        setstate(e.target.value)
-    } 
-
-    const peos = () => {
-        console.log(info);
-    }
-
+     
+    
+    
 
     return (
         <div>
-           <h1>Search about something related with the NASA</h1>
-           <div>
-            <input onChange={handleinputChange}></input>
-            <button onClick={() => searchInfo()}>Search</button>
-            
-            <button onClick={() => peos()}>hola2</button>
-           </div>
-         <div>
-            {alternator? <p> {ratas.collection.items[0].data[0].title}
-                
-
-
-
-            </p> : <p>no hay info</p>}
-         </div>
+        <div>
+         <button  onClick={() => movement()}>search</button>
+         <input   onChange={handleInputChange}></input> 
+         
+        </div>
+          {alt? <Nasaimages valor={info}></Nasaimages> : <h1>no hay info</h1>} 
+         
            
         </div>
     );

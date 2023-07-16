@@ -2,25 +2,27 @@ import React, { useState } from 'react';
 import { API_KEY } from '../Api/key'
 import { useDispatch, useSelector } from 'react-redux';
 import { agregarInfo } from '../store/miSlice';
-import '../index.css'
+
+import './styles/day.css'
 
 const DayNasaPicture = () => {
     let initialState = [];
+    // eslint-disable-next-line
     const [daystate, setDaystate] = useState(initialState);
     const nasainfo = useSelector(state => state.picturedaytoday.dayinfo)
     const alternator = useSelector(state => state.picturedaytoday.movement)
     let alternator2 = false;
     const dispatch = useDispatch();
 
-    const addHistoryday = async () => {
-       await fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
-        .then((response) => response.json())
-        .then((data) => {
-            setDaystate(data)
+    // const addHistoryday = async () => {
+    //    await fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
+    //     .then((response) => response.json())
+    //     .then((data) => {
+    //         setDaystate(data)
             
-            ;
-        })
-    }
+    //         ;
+    //     })
+    // }
 
     const addHistorydaytool = async () => {
         await fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
@@ -46,19 +48,13 @@ const DayNasaPicture = () => {
     return (
         <div>
             {alternator ? 
-            <div>
+            <div className='imagetofix'>
                 <h1>Today's picture taken by the Nasa</h1>
                 
                 <h2>{nasainfo[0].title}</h2>
-                <img alt='nasaimage' src={nasainfo[0].url}></img>
+                <img className='nasaimage' alt='nasaimage' src={nasainfo[0].url}></img>
                 <p>{nasainfo[0].explanation}</p>
             </div>
-            
-            
-            
-            
-            
-            
             
             : 
             
