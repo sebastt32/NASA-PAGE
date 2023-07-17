@@ -10,7 +10,7 @@ const MainPage = () => {
             <button className='buttonsnav'>About us</button>  
             <Link className='buttonsnav' to='/dayimage'><button className='buttonsnav'>Day image</button></Link>
             <Link className='buttonsnav' to='/nasainfo'><button className='buttonsnav'>Search</button></Link> 
-            <button className='buttonsnav'>NASA pictures</button> 
+            <Link className='buttonsnav' to='/nasaRovers'><button className='buttonsnav'>Rovers pictures</button></Link> 
             </nav>
             <div>
                 <h1>Nasa page</h1>
