@@ -1,0 +1,74 @@
+
+
+.buttonsnav {
+    display: flex;
+    justify-content: flex-end;
+    
+    
+}
+
+.boton {
+    cursor: pointer;
+    font-size: small;
+    
+    background-color: rgb(93, 187, 231);
+    border-radius: 10px;
+    border-color: rgb(93, 187, 231);
+    margin-left: 20px;
+    margin-right: 50px;
+    margin-top: 30px;
+    
+    width: 90px;
+    height: 40px;
+}
+
+.boton:hover {
+    cursor: pointer;
+    
+    font: small-caps;
+    
+    background-color: rgb(202, 119, 240);
+    border-radius: 10px;
+    border-color: rgb(93, 187, 231);
+    margin-left: 20px;
+    margin-right: 50px;
+    margin-top: 30px;
+    
+    width: 90px;
+    height: 40px;
+}
+
+
+
+.nasalogo {
+    width: 120px;
+    height: 100px;
+    margin-right: 58%;
+    
+  }
+  
+  
+  
+ 
+  
+  .daylogo {
+    display: flex;
+    width: 500px;
+    height: 500px;
+    margin-left: 10%;
+  }
+
+.boxtest {
+    margin-top: 200px;
+    margin-left: 200px;
+    font-size: larger;
+    background-color: #ffffff;
+    border-radius: 30px;
+    
+  border: 10px solid #7e3daa;
+  
+  padding: 70px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} 
