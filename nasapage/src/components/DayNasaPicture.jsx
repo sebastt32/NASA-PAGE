@@ -11,7 +11,7 @@ const DayNasaPicture = () => {
     const [daystate, setDaystate] = useState(initialState);
     const nasainfo = useSelector(state => state.picturedaytoday.dayinfo)
     const alternator = useSelector(state => state.picturedaytoday.movement)
-    let alternator2 = false;
+    
     const dispatch = useDispatch();
 
     // const addHistoryday = async () => {
@@ -28,43 +28,31 @@ const DayNasaPicture = () => {
         await fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
          .then((response) => response.json())
          .then((data) => {dispatch(agregarInfo(data));})
-         .then((data) => {
-             peo()
-         })
+         
          
             }
 
-    const show =  () => {
-        const info = {...daystate}
-       dispatch(agregarInfo(info))
-    }
+    
 
-    const peo = () => {
-        
-        alternator2 = true;
-        console.log(alternator2);
-    }
+   
 
     return (
         <div>
             {alternator ? 
             <div className='imagetofix'>
-                <h1>Today's picture taken by the Nasa</h1>
+                <h1 className='textsecond'>Today's picture taken by the Nasa</h1>
                 
-                <h2>{nasainfo[0].title}</h2>
+                <h2 className='textsecond'>{nasainfo[0].title}</h2>
                 <img className='nasaimage' alt='nasaimage' src={nasainfo[0].url}></img>
-                <p>{nasainfo[0].explanation}</p>
+                <h4 className='textsecond'>{nasainfo[0].explanation}</h4>
             </div>
             
             : 
             
             <div>
-            <h1>If you want to se the information make the request in the big button</h1>
-            <button onClick={()=> addHistorydaytool() }>ASK FOR INFO</button>
-            {alternator2 ? <div>
-                Now the last one 
-                <button onClick={() => show()}>touch me</button>
-            </div> : null}
+            <h1 className='textfirst'>If you want to see the information make the request in the big button</h1>
+            <button className='buttonrequest' onClick={()=> addHistorydaytool() }>ASK FOR INFO</button>
+            
 
             </div>}
         </div>

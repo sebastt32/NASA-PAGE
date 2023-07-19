@@ -1,6 +1,51 @@
 .nasasearching{
   justify-content: center;
   display: flex;
-  flex-direction: column;
+  padding: auto;
   
+  flex-wrap: wrap;
+}
+
+.boxes {
+  width: 500px;
+  height: 500px;
+  color: aliceblue;
+  margin-left: 3%;
+  margin-top: 3%;
+  
+}
+
+.searcher {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  
+}
+
+.botonsearch {
+  cursor: pointer;
+  color: rgb(5, 10, 26);
+  background-color: blueviolet;
+  width: 70px;
+  height: 30px;
+}
+
+.inputsearch{
+  color: black;
+  background-color: aquamarine;
+}
+
+.initialtext {
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+}
+
+.imgapi {
+  width: 300px;
+  height: 300px;
+}
+
+.title {
+  color: aliceblue;
 }

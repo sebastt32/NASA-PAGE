@@ -4,6 +4,7 @@ import { API_KEY } from '../Api/key';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchImagesData1 } from '../store/miSlice';
 import NasaRovers from './Gestion/nasaRovers';
+import './styles/Rovers.css'
 
 const MarsRoverP = () => {
     const dispatch = useDispatch()
@@ -28,9 +29,9 @@ const MarsRoverP = () => {
 
         
         <div>
-        
+            <h1 className='title'>Rovers pictures</h1>
                
-              {alternator? <NasaRovers value={info}></NasaRovers> : <button onClick={() => funcionality()}>hola</button>}
+              {alternator? <NasaRovers value={info}></NasaRovers> : <button className='botoninfo' onClick={() => funcionality()}>GET INFO</button>}
                  
             
              

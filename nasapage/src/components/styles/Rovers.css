@@ -1,0 +1,34 @@
+.botoninfo {
+    display: flex;
+    cursor: pointer;
+    width: 100px;
+    height: 150px;
+    margin-top: 19%;
+    margin-left: 48%;
+    background-image: url('https://cloudfront-eu-central-1.images.arcpublishing.com/prisaradio/HWTFT5J5Y5KZFFERV2W7YJQXLE.jpg');
+    background-size: cover;
+    
+    border-color: black;
+    border-width: 10px;
+    color: rgb(226, 226, 226);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.orderrovers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.imagerover{
+    height: 300px;
+    width: 300px;
+
+    margin-left: 5%;
+    margin-top: 3%;
+}

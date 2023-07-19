@@ -1,11 +1,51 @@
 .imagetofix{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding-left: 450px;
+    height: 300px;
+    width: 400px;
+    
+    background-color: white;
+    margin-top: 17%;
+    
+    margin-left: 35%;
+    
 
 }
 
+.textsecond {
+    color: aliceblue;
+    
+    width: 400px;
+    margin-left: 90px;
+}
+
+
+
 .nasaimage {
     display: flex;
-    height: 400px;
-    width: 400px;
+    height: 500px;
+    width: 600px;
+}
+
+.textfirst {
+    display: flex;
+    justify-content: center;
+    color: antiquewhite;
+}
+
+.buttonrequest{
+    display: flex;
+    cursor: pointer;
+    width: 100px;
+    height: 150px;
+    margin-top: 19%;
+    margin-left: 48%;
+    background-image: url('https://cloudfront-eu-central-1.images.arcpublishing.com/prisaradio/HWTFT5J5Y5KZFFERV2W7YJQXLE.jpg');
+    background-size: cover;
+    
+    border-color: black;
+    border-width: 10px;
+    color: rgb(226, 226, 226);
+    
 }

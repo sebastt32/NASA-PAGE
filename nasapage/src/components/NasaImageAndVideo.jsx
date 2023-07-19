@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchImagesData } from '../store/miSlice';
 import Nasaimages from './Gestion/nasaimages';
+import './styles/nasasearching.css'
 
 
 
@@ -33,12 +34,12 @@ const NasaImageAndVideo =  () => {
 
     return (
         <div>
-        <div>
-         <button  onClick={() => movement()}>search</button>
-         <input   onChange={handleInputChange}></input> 
+        <div className='searcher'>
+         <button className='botonsearch' onClick={() => movement()}>search</button>
+         <input className='inputsearch'  onChange={handleInputChange}></input> 
          
         </div>
-          {alt? <Nasaimages valor={info}></Nasaimages> : <h1>no hay info</h1>} 
+          {alt? <Nasaimages valor={info}></Nasaimages> : <h1 className='initialtext'>Nothing here</h1>} 
          
            
         </div>
