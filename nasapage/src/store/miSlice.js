@@ -84,7 +84,10 @@ export const fetchImagesData = (value) => async (dispatch) => {
     try {
       dispatch(fetchImagesStart());
       const data = await fetchImages(value);
-      dispatch(fetchImagesSuccess(data));
+      
+        dispatch(fetchImagesSuccess(data));
+      
+      
     } catch (error) {
       dispatch(fetchImagesFailure(error.message));
     }

@@ -49,3 +49,9 @@
 .title {
   color: aliceblue;
 }
+
+.noinfo {
+  text-align: center;
+  font-size: 3em;
+  color: white;
+}
